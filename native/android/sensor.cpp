@@ -120,6 +120,11 @@ int ASensorEventQueue_hasEvents(ASensorEventQueue* queue)
     return (nfd == 0) ? 0 : 1;
 }
 
+int ASensorEventQueue_getFd(ASensorEventQueue* queue)
+{
+    return static_cast<SensorEventQueue*>(queue)->getFd();
+}
+
 ssize_t ASensorEventQueue_getEvents(ASensorEventQueue* queue,
                 ASensorEvent* events, size_t count)
 {
