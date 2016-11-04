@@ -15,9 +15,8 @@
 #
 LOCAL_PATH := $(call my-dir)
 
-# Hybris: Only include servicemanager, bootanim and androidfw
+# Hybris: Only include bootanim and androidfw
 ifeq (,$(ONE_SHOT_MAKEFILE))
 include $(LOCAL_PATH)/cmds/bootanimation/Android.mk \
-        $(LOCAL_PATH)/cmds/servicemanager/Android.mk \
         $(LOCAL_PATH)/libs/androidfw/Android.mk
 endif
