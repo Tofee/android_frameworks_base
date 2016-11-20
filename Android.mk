@@ -17,6 +17,7 @@ LOCAL_PATH := $(call my-dir)
 
 # Mer: Only include bootanim and androidfw
 ifeq (,$(ONE_SHOT_MAKEFILE))
-include $(LOCAL_PATH)/cmds/bootanimation/Android.mk \
-        $(LOCAL_PATH)/libs/androidfw/Android.mk
+include $(LOCAL_PATH)/libs/androidfw/Android.mk \
+        $(LOCAL_PATH)/libs/hwui/Android.mk \
+        $(LOCAL_PATH)/core/jni/Android.mk
 endif
